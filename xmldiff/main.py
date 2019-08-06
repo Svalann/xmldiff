@@ -6,7 +6,7 @@ from argparse import ArgumentParser, FileType
 from lxml import etree
 from xmldiff import diff, formatting, patch
 
-# __version__ = pkg_resources.require("xmldiff")[0].version
+__version__ = pkg_resources.require("xmldiff")[0].version
 
 FORMATTERS = {
     'diff': formatting.DiffFormatter,
@@ -60,9 +60,9 @@ def make_diff_parser():
                         help='The second input file.')
     parser.add_argument('-h', '--help', action='help',
                         help='Show this help message and exit.')
-    #parser.add_argument('-v', '--version', action='version',
-    #                    help='Display version and exit.',
-    #                    version='xmldiff %s' % __version__)
+    parser.add_argument('-v', '--version', action='version',
+                        help='Display version and exit.',
+                        version='xmldiff %s' % __version__)
     parser.add_argument('-f', '--formatter', default='diff',
                         choices=list(FORMATTERS.keys()),
                         help='Formatter selection.')
@@ -152,9 +152,9 @@ def make_patch_parser():
                         help='An unpatched XML file.')
     parser.add_argument('-h', '--help', action='help',
                         help='Show this help message and exit.')
-    #parser.add_argument('-v', '--version', action='version',
-    #                    help='Display version and exit.',
-    #                    version='xmldiff %s' % __version__)
+    parser.add_argument('-v', '--version', action='version',
+                        help='Display version and exit.',
+                        version='xmldiff %s' % __version__)
     return parser
 
 
