@@ -1,5 +1,6 @@
 xmldiff
 ========
+Copy from: https://github.com/Shoobx/xmldiff
 
 .. image:: https://travis-ci.org/Shoobx/xmldiff.svg?branch=master
   :target: https://travis-ci.org/Shoobx/xmldiff
